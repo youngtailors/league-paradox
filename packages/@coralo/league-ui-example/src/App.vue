@@ -1,6 +1,6 @@
 <template>
   <div>
-    <lu-button></lu-button>
+    <lu-button>Anh nhớ em</lu-button>
   </div>
 </template>
 
