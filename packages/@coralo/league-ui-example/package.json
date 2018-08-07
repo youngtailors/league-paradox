@@ -1,0 +1,29 @@
+{
+  "name": "@coralo/league-ui-example",
+  "version": "0.0.0",
+  "description": "League of Legend UI Example",
+  "main": "index.js",
+  "author": "Evan N <dacsang97@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "league-of-legend",
+    "lol",
+    "ui",
+    "components",
+    "vue",
+    "react"
+  ],
+  "repository": "https://github.com/coralo/league-paradox",
+  "peerDependencies": {
+    "vue": "^2.5.17"
+  },
+  "scripts": {
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "serve": "vue-cli-service serve"
+  },
+  "dependencies": {
+    "@coralo/league-ui": "^0.0.0"
+  }
+}

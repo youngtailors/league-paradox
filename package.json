@@ -1,0 +1,41 @@
+{
+  "name": "league-paradox",
+  "description": "League of Legend UI Component",
+  "author": "Evan N <dacsang97@gmail.com>",
+  "homepage": "https://github.com/coralo/league-paradox",
+  "bugs": {
+    "url": "https://github.com/coralo/league-paradox/issues"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/@coralo/*",
+    "packages/test/*"
+  ],
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-rc.10",
+    "@vue/cli-plugin-eslint": "^3.0.0-rc.10",
+    "@vue/cli-service": "^3.0.0-rc.10",
+    "@vue/eslint-config-standard": "^3.0.0-rc.10",
+    "@vue/test-utils": "^1.0.0-beta.24",
+    "concurrently": "^3.6.1",
+    "lerna": "^3.0.0-rc.0",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.64.0",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-nodent": "^0.2.2",
+    "rollup-plugin-uglify": "^4.0.0",
+    "rollup-plugin-vue": "^4.3.2",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "vue": "^2.5.17"
+  },
+  "scripts": {
+    "build": "lerna run build",
+    "clean": "rimraf packages/**/dist",
+    "prebuild": "yarn clean",
+    "serve": "lerna run --parallel serve",
+    "watch": "lerna run --parallel watch",
+    "start": "concurrently 'npm:watch' 'npm:serve'",
+    "setup": "lerna clean --yes && yarn install"
+  }
+}
