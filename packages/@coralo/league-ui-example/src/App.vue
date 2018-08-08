@@ -68,4 +68,7 @@ body
 
 .input-section
   max-width 600px
+
+input
+  font-size 100%
 </style>
