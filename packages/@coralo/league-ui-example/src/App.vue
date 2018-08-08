@@ -18,7 +18,10 @@
     <section>
       <h1>Checkbox</h1>
       <h3>Active</h3>
-      <lu-checkbox>Hextech</lu-checkbox>
+      <p>
+        Checkbox Status: {{ checked }}
+      </p>
+      <lu-checkbox v-model="checked">Hextech</lu-checkbox>
       <h3>Disabled</h3>
       <lu-checkbox disabled>Disabled</lu-checkbox>
     </section>
@@ -28,6 +31,11 @@
 <script>
 
 export default {
+  data () {
+    return {
+      checked: false
+    }
+  },
   methods: {
     btnClick () {
       console.log('Button clicked')

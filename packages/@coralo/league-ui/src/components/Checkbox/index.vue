@@ -20,21 +20,24 @@
 
 <script>
 export default {
+  model: {
+    prop: 'checked',
+    event: 'change',
+  },
   props: {
     disabled: {
       type: Boolean,
       default: false
-    }
-  },
-  data () {
-    return {
-      checked: false
+    },
+    checked: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
     onClick () {
       this.$emit('click')
-      this.checked = !this.checked
+      this.$emit('change', !this.checked)
     },
     onBlur () {
       this.$emit('blur')
