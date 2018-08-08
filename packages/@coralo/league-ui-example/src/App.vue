@@ -1,6 +1,6 @@
 <template>
   <div>
-    <lu-button>Anh nhớ em</lu-button>
+    <lu-button>Tìm trận</lu-button>
   </div>
 </template>
 
@@ -13,3 +13,8 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+body
+  background url('./backdrop.png')
+</style>

@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "rollup -c --environment BUILD:production",
-    "watch": "concurrently \"rollup -w -c\""
+    "build": "vue-cli-service build src/main.js --mode production --target lib --name leagueui --modern --no-clean",
+    "lint": "vue-cli-service lint",
+    "watch": "npm run build -- --watch"
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "^3.0.0-rc.10"

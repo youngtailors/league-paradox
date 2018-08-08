@@ -1,8 +1,6 @@
 import Button from './Button/index.vue'
-import App from './App.vue'
-export { Button, App }
+export { Button }
 
 export default {
-  Button,
-  App
+  Button
 }
