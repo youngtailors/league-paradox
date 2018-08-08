@@ -74,7 +74,6 @@ export default {
       this.down = true
     },
     onMouseUp (evt) {
-      console.log('Up')
       const mouseIsOnButton = this.$refs.root.contains(evt.target)
       this.down = false
       this.hover = mouseIsOnButton
@@ -202,7 +201,7 @@ export default {
   // Hover state
   &.hover
     color #F0E6D2
-    animation hoverTextShadow 600ms cubic-bezier(0, 0, 0.33, 1) 1
+    animation hover-text-shadow 600ms cubic-bezier(0, 0, 0.33, 1) 1
 
     .border-transition
       opacity 1
@@ -216,7 +215,7 @@ export default {
       border-image-slice 1
 
     .glow
-      animation hoverGlow 600ms cubic-bezier(0, 0, 0.33, 1) 1
+      animation hover-glow 600ms cubic-bezier(0, 0, 0.33, 1) 1
 
     .button-bg
       opacity 1
@@ -235,7 +234,7 @@ export default {
     color #E4E1D8
     border-image linear-gradient(to top, #FFFFFF 0%, #FFFFFF 33%, #FFFFFF 66%, #FFFFFF 100%)
     border-image-slice 1
-    animation clickScale 130ms linear 1, hoverTextShadow 400ms linear 1
+    animation click-scale 130ms linear 1, hover-text-shadow 400ms linear 1
 
     .border-transition
       border-image linear-gradient(to top, #C89C3C 0%, #DCC188 50%, #E1C998 71%, #F0E6D8 100%)
@@ -244,10 +243,10 @@ export default {
       opacity 1
 
     .glow
-      animation hoverGlow 600ms cubic-bezier(0, 0, 0.33, 1) 1
+      animation hover-glow 600ms cubic-bezier(0, 0, 0.33, 1) 1
 
     .sheen
-      animation clickSheen 330ms 1 linear
+      animation click-sheen 330ms 1 linear
 
     .buttonbg
       opacity 1
@@ -259,7 +258,7 @@ export default {
       &::after
         animation clickFlare 400ms cubic-bezier(0, 0, 0.33, 1) 30ms 1
 
-  @keyframes hoverTextShadow
+  @keyframes hover-text-shadow
     0%
       text-shadow 0 0 4px #F0E6D8
 
@@ -269,7 +268,7 @@ export default {
     100%
       text-shadow 0 0 4px rgba(240, 230, 216, 0)
 
-  @keyframes hoverGlow
+  @keyframes hover-glow
     0%
       box-shadow 0 0 5px 4px rgba(240, 230, 216, 0.5), 0 0 2px 1px rgba(240, 230, 216, 0.5) inset
 
@@ -292,14 +291,14 @@ export default {
     100%
       opacity 0
 
-  @keyframes clickScale
+  @keyframes click-scale
     from
       transform scale(0.94)
 
     to
       transform scale(1)
 
-  @keyframes clickSheen
+  @keyframes click-sheen
     from
       transform translateY(-100%) rotate(0deg)
 
