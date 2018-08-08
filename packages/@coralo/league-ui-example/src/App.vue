@@ -25,6 +25,20 @@
       <h3>Disabled</h3>
       <lu-checkbox disabled>Disabled</lu-checkbox>
     </section>
+    <section class="input-section">
+      <h1>Text Input</h1>
+      <p>
+        <strong>Message</strong>: {{ text }}
+      </p>
+      <h3>Enable</h3>
+      <lu-input v-model="text" />
+      <h3>Disable</h3>
+      <lu-input disabled v-model="text" />
+      <h3>Search</h3>
+      <lu-input type="search" v-model="text" />
+      <h3>With Clear</h3>
+      <lu-input hide-clear v-model="text" />
+    </section>
   </div>
 </template>
 
@@ -33,7 +47,8 @@
 export default {
   data () {
     return {
-      checked: false
+      checked: false,
+      text: ''
     }
   },
   methods: {
@@ -50,4 +65,7 @@ body
   background-attachment fixed
   color rgb(94.1%, 90.2%, 82.4%)
   font-family 'Roboto', sans-serif
+
+.input-section
+  max-width 600px
 </style>
