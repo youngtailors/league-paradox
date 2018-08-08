@@ -104,8 +104,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '../assets/styl/variables.styl'
-@import '../assets/styl/mixins.styl'
+@import '../../assets/styl/variables.styl'
+@import '../../assets/styl/mixins.styl'
 
 .button
   display inline-block
