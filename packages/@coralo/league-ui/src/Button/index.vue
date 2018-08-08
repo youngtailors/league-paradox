@@ -4,11 +4,7 @@
     ref="root"
     :class="[
       'button',
-      {
-        hover,
-        down,
-        click
-      }
+      ...classname
     ]"
     @mouseover="onMouseOver"
     @mouseout="onMouseOut"
@@ -32,6 +28,12 @@
 
 <script>
 export default {
+  props: {
+    disabled: {
+      type: Boolean,
+      default: false
+    }
+  },
   data () {
     return {
       hover: false,
@@ -45,6 +47,16 @@ export default {
     this.$once('hook:beforeDestroy', () => {
       document.removeEventListener('mouseup', this.onMouseUp, false)
     })
+  },
+  computed: {
+    classname () {
+      if (this.disabled) return { disabled: this.disabled }
+      return {
+        hover: this.hover,
+        down: this.down,
+        click: this.click
+      }
+    }
   },
   methods: {
     playAnim () {
@@ -68,7 +80,9 @@ export default {
       })
     },
     onClick () {
-      this.playAnim()
+      if (!this.disabled) {
+        this.playAnim()
+      }
     },
     onMouseDown () {
       this.down = true
@@ -257,6 +271,26 @@ export default {
 
       &::after
         animation clickFlare 400ms cubic-bezier(0, 0, 0.33, 1) 30ms 1
+
+  &.disabled
+    cursor default
+    color lcu-text-disabled
+    background-color lcu-bg-disabled
+    border-image initial
+
+    *
+      cursor default
+      animation none
+
+    .flare, .glow, .sheen-wrapper, .button-bg
+      display none
+
+    .border-transition
+      border-color #5C5B57
+      opacity 1
+
+    .border-idle
+      opacity 0
 
   @keyframes hover-text-shadow
     0%
