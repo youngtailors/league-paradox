@@ -2,5 +2,7 @@ import Button from './Button/index.vue'
 export { Button }
 
 export default {
-  Button
+  install (v) {
+    v.component('lu-btn', Button)
+  }
 }

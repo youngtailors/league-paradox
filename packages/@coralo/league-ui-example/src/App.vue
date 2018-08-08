@@ -1,16 +1,12 @@
 <template>
   <div>
-    <lu-button>Tìm trận</lu-button>
+    <lu-btn>Tìm trận</lu-btn>
   </div>
 </template>
 
 <script>
-import { Button as LuButton } from '@coralo/league-ui'
 
 export default {
-  components: {
-    LuButton
-  }
 }
 </script>
 

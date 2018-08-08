@@ -1,5 +1,6 @@
 <template>
   <div
+    tabindex="0"
     ref="root"
     :class="[
       'button',
@@ -12,6 +13,7 @@
     @mouseover="onMouseOver"
     @mouseout="onMouseOut"
     @mousedown="onMouseDown"
+    @mouseup="onMouseUp"
     @click="onClick"
     >
     <div class="button-bg" />
