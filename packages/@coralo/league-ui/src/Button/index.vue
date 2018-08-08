@@ -82,6 +82,7 @@ export default {
     onClick () {
       if (!this.disabled) {
         this.playAnim()
+        this.$emit('click')
       }
     },
     onMouseDown () {
