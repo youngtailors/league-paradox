@@ -39,6 +39,10 @@
       <h3>With Clear</h3>
       <lu-input hide-clear v-model="text" />
     </section>
+    <section>
+      <h1>Dropdown</h1>
+      <lu-dropdown />
+    </section>
   </div>
 </template>
 
