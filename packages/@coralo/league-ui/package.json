@@ -1,6 +1,8 @@
 {
   "name": "@coralo/league-ui",
   "version": "0.0.0",
+  "description": "The League of Legend UI",
+  "author": "Evan N <dacsang97@gmail.com>",
   "private": true,
   "scripts": {
     "build": "vue-cli-service build src/main.js --mode production --target lib --name leagueui --modern --no-clean",
@@ -28,6 +30,9 @@
   "peerDependencies": {
     "vue": "^2.5.17"
   },
-  "description": "The League of Legend UI",
-  "author": "Evan N <dacsang97@gmail.com>"
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }

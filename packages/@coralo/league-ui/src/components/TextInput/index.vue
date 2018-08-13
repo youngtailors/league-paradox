@@ -93,7 +93,6 @@ export default {
     transition opacity 0.2s ease-out, visibility 0.2s ease-out
     background-color darken(lcu-text-light, 10%)
     cursor pointer
-    -webkit-mask-image url('./close.svg')
     mask-image url('./close.svg')
     height 0.8em
     width 0.8em
@@ -133,7 +132,6 @@ export default {
     border 1px solid #785A28
     background-color rgba(0, 0, 0, 0.7)
     appearance none
-    -webkit-appearance none
     outline none
     box-shadow 0 0 0 1px rgba(0, 0, 0, 0.25) inset, 0 0 0 1px rgba(0, 0, 0, 0.25)
     width 100%
