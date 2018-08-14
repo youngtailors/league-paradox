@@ -6,6 +6,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'lu-btn-group'
+}
+</script>
+
 <style lang="stylus" scoped>
 .button-group
   display inline-flex

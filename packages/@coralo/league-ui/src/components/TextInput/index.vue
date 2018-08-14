@@ -5,7 +5,8 @@
       {
         disabled
       }
-    ]">
+    ]"
+  >
     <i
       :class="[
         'clear',
@@ -16,17 +17,19 @@
     <input
       :disabled="disabled"
       :type="type"
-      class="input-element"
-      :value="value"
       :placeholder="placeholder"
+      :value="value"
+      class="input-element"
       @input="onInput"
-      @blur="onBlur" />
+      @blur="onBlur"
+    >
     <slot />
   </div>
 </template>
 
 <script>
 export default {
+  name: 'lu-input',
   model: {
     prop: 'value',
     event: 'change'

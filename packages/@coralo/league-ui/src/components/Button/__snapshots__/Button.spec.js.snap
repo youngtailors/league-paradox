@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button render correctly 1`] = `
+<div tabindex="0" class="button">
+  <div class="button-bg"></div>
+  <div class="border-idle"></div>
+  <div class="border-transition"></div>
+  <div class="flare"></div>
+  <div class="glow"></div>
+  <div class="sheen-wrapper">
+    <div class="sheen"></div>
+  </div>
+  <div class="content"></div>
+</div>
+`;
+
+exports[`Button render slot correctly 1`] = `
+<div tabindex="0" class="button">
+  <div class="button-bg"></div>
+  <div class="border-idle"></div>
+  <div class="border-transition"></div>
+  <div class="flare"></div>
+  <div class="glow"></div>
+  <div class="sheen-wrapper">
+    <div class="sheen"></div>
+  </div>
+  <div class="content">Default</div>
+</div>
+`;

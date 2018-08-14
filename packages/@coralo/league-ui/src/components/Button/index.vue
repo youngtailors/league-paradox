@@ -1,17 +1,17 @@
 <template>
   <div
-    tabindex="0"
     ref="root"
     :class="[
       'button',
       ...classname
     ]"
+    tabindex="0"
     @mouseover="onMouseOver"
     @mouseout="onMouseOut"
     @mousedown="onMouseDown"
     @mouseup="onMouseUp"
     @click="onClick"
-    >
+  >
     <div class="button-bg" />
     <div class="border-idle" />
     <div class="border-transition" />
@@ -28,6 +28,7 @@
 
 <script>
 export default {
+  name: 'lu-btn',
   props: {
     disabled: {
       type: Boolean,

@@ -1,5 +1,6 @@
 <script>
 export default {
+  name: 'lu-arrow',
   render (h) {
     return h('svg', {
       attrs: {

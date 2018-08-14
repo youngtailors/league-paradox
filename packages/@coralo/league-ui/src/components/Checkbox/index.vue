@@ -1,13 +1,15 @@
 <template>
   <div
-    role="checkbox"
     :class="[
       'checkbox',
       { checked, disabled }
     ]"
+    role="checkbox"
     v-on="eventHandlers"
-    >
-    <input type="checkbox" v-model="checked" />
+  >
+    <input
+      v-model="checked"
+      type="checkbox">
     <div class="box">
       <div class="border" />
       <i class="check icon-check" />
@@ -20,9 +22,10 @@
 
 <script>
 export default {
+  name: 'lu-checkbox',
   model: {
     prop: 'checked',
-    event: 'change',
+    event: 'change'
   },
   props: {
     disabled: {

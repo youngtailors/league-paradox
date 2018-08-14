@@ -10,6 +10,7 @@
 import Arrow from './Arrow'
 
 export default {
+  name: 'lu-dropdown',
   components: {
     Arrow
   }
