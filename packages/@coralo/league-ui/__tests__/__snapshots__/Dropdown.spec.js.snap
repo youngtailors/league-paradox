@@ -8,9 +8,11 @@ exports[`Arrow render correctly 1`] = `
 `;
 
 exports[`Dropdown render correctly 1`] = `
-<div class="dropdown">
+<div tabindex="0" role="combobox" class="dropdown">
   <div class="control">
+    Select ...
     <arrow-stub class="arrow"></arrow-stub>
   </div>
+  <div aria-hidden="true" role="listbox" class="options hidden"></div>
 </div>
 `;
