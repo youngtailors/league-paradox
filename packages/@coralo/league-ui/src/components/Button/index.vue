@@ -43,12 +43,6 @@ export default {
       clickEnd: null
     }
   },
-  mounted () {
-    document.addEventListener('mouseup', this.onMouseUp, false)
-    this.$once('hook:beforeDestroy', () => {
-      document.removeEventListener('mouseup', this.onMouseUp, false)
-    })
-  },
   computed: {
     classname () {
       if (this.disabled) return { disabled: this.disabled }
@@ -58,6 +52,12 @@ export default {
         click: this.click
       }
     }
+  },
+  mounted () {
+    document.addEventListener('mouseup', this.onMouseUp, false)
+    this.$once('hook:beforeDestroy', () => {
+      document.removeEventListener('mouseup', this.onMouseUp, false)
+    })
   },
   methods: {
     playAnim () {

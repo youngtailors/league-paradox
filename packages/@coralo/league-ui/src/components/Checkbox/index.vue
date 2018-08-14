@@ -37,15 +37,6 @@ export default {
       default: false
     }
   },
-  methods: {
-    onClick () {
-      this.$emit('click')
-      this.$emit('change', !this.checked)
-    },
-    onBlur () {
-      this.$emit('blur')
-    }
-  },
   computed: {
     eventHandlers () {
       if (this.disabled) return {}
@@ -53,6 +44,15 @@ export default {
         click: this.onClick,
         blur: this.onBlur
       }
+    }
+  },
+  methods: {
+    onClick () {
+      this.$emit('click')
+      this.$emit('change', !this.checked)
+    },
+    onBlur () {
+      this.$emit('blur')
     }
   }
 }

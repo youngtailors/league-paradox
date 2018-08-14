@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox render checked correctly 1`] = `
+<div role="checkbox" class="checkbox checked">
+  <input type="checkbox">
+  <div class="box">
+    <div class="border"></div>
+    <i class="check icon-check"></i>
+  </div> <span class="label">Checked</span></div>
+`;
+
+exports[`Checkbox render disabled correctly 1`] = `
+<div role="checkbox" class="checkbox disabled">
+  <input type="checkbox">
+  <div class="box">
+    <div class="border"></div>
+    <i class="check icon-check"></i>
+  </div> <span class="label">Disabled</span></div>
+`;
+
+exports[`Checkbox render unchecked correctly 1`] = `
+<div role="checkbox" class="checkbox">
+  <input type="checkbox">
+  <div class="box">
+    <div class="border"></div>
+    <i class="check icon-check"></i>
+  </div> <span class="label">Unchecked</span></div>
+`;
+
+exports[`Checkbox should change value when it is clicked 1`] = `
+<div>
+  <div role="checkbox" class="checkbox">
+    <input type="checkbox">
+    <div class="box">
+      <div class="border"></div>
+      <i class="check icon-check"></i>
+    </div> <span class="label"></span></div>
+</div>
+`;
