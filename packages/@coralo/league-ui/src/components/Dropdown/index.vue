@@ -22,6 +22,7 @@
         }
       ]"
     >
+      {{ `${selected ? selected : placeholder}` }}
       <arrow class="arrow" />
     </div>
     <div
@@ -60,12 +61,20 @@ export default {
     Arrow,
     DropdownOption
   },
+  model: {
+    prop: 'selected',
+    event: 'select'
+  },
   props: {
     options: {
       type: Array,
       default: () => {
         return []
       }
+    },
+    placeholder: {
+      type: String,
+      default: 'Select ...'
     },
     tabIndex: {
       type: Number,
@@ -78,6 +87,10 @@ export default {
     expanded: {
       type: Boolean,
       default: false
+    },
+    selected: {
+      type: String,
+      default: ''
     }
   },
   data () {

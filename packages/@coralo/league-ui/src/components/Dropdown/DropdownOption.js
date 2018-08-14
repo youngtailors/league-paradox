@@ -15,14 +15,14 @@ export default {
     h,
     {
       props: { selected, focused },
-      data: { staticClass },
+      data: { class: dynamicClass },
       children
     }
   ) {
     return h(
       'div',
       {
-        class: staticClass,
+        class: dynamicClass,
         attrs: {
           role: 'option',
           'aria-selected': selected
