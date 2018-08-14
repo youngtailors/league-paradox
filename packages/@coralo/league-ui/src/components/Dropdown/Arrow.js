@@ -1,8 +1,9 @@
-<script>
 export default {
   name: 'lu-arrow',
-  render (h) {
+  functional: true,
+  render (h, { data: { staticClass } }) {
     return h('svg', {
+      class: staticClass,
       attrs: {
         xmlns: 'http://www.w3.org/2000/svg',
         x: '0px',
@@ -24,4 +25,3 @@ export default {
     ])
   }
 }
-</script>

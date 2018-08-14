@@ -1,4 +1,5 @@
 import * as components from './components'
+import 'normalize.css'
 
 export default {
   install (v) {

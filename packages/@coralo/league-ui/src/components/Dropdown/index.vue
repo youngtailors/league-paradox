@@ -1,18 +1,109 @@
 <template>
-  <div class="dropdown">
-    <div class="control">
+  <div
+    ref="root"
+    :tabindex="disabled ? -1 : tabIndex"
+    :class="[
+      'dropdown',
+      {
+        disabled,
+
+      }
+    ]"
+    :aria-disabled="disabled"
+    :aria-expanded="isOpen"
+    role="combobox"
+    v-on="eventHandlers"
+  >
+    <div
+      :class="[
+        'control',
+        {
+          active: isOpen
+        }
+      ]"
+    >
       <arrow class="arrow" />
+    </div>
+    <div
+      v-if="!disabled"
+      ref="menu"
+      :class="[
+        'options',
+        {
+          hidden: !isOpen
+        }
+      ]"
+      :aria-hidden="!isOpen"
+      role="listbox"
+    >
+      <dropdown-option
+        v-for="(option, id) in options"
+        :class="[
+          'option',
+          {
+            selected
+          }
+        ]"
+        :key="id"
+      >{{ option }}</dropdown-option>
     </div>
   </div>
 </template>
 
 <script>
 import Arrow from './Arrow'
+import DropdownOption from './DropdownOption'
 
 export default {
   name: 'lu-dropdown',
   components: {
-    Arrow
+    Arrow,
+    DropdownOption
+  },
+  props: {
+    options: {
+      type: Array,
+      default: () => {
+        return []
+      }
+    },
+    tabIndex: {
+      type: Number,
+      default: 0
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    expanded: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data () {
+    return {
+      open: false
+    }
+  },
+  computed: {
+    isOpen () {
+      return this.disabled ? false : (!!this.open || !!this.expanded)
+    },
+    eventHandlers () {
+      return {
+        click: () => this.handleToggle(!this.open)
+      }
+    }
+  },
+  methods: {
+    handleToggle (toggled) {
+      let nextOpen = toggled
+      if (nextOpen !== this.open) {
+        this.open = nextOpen
+      }
+
+      this.$emit('toggle')
+    }
   }
 }
 </script>

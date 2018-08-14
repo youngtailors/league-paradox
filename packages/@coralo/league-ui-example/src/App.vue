@@ -31,17 +31,38 @@
         <strong>Message</strong>: {{ text }}
       </p>
       <h3>Enable</h3>
-      <lu-input v-model="text" />
+      <lu-input
+        v-model="text"
+        placeholder="Hextech..."
+      />
       <h3>Disable</h3>
-      <lu-input disabled v-model="text" />
+      <lu-input
+        v-model="text"
+        placeholder="Hextech..."
+        disabled />
       <h3>Search</h3>
-      <lu-input type="search" v-model="text" />
+      <lu-input
+        v-model="text"
+        placeholder="Hextech..."
+        type="search" />
       <h3>With Clear</h3>
-      <lu-input hide-clear v-model="text" />
+      <lu-input
+        v-model="text"
+        placeholder="Hextech..."
+        hide-clear
+      />
     </section>
     <section>
       <h1>Dropdown</h1>
-      <lu-dropdown />
+      <h3>Active</h3>
+      <lu-dropdown
+        :options="options"
+      />
+      <h3>Disabled</h3>
+      <lu-dropdown
+        :disabled="true"
+        :options="options"
+      />
     </section>
   </div>
 </template>
@@ -52,7 +73,8 @@ export default {
   data () {
     return {
       checked: false,
-      text: ''
+      text: '',
+      options: ['Jinx', 'Leona', 'Renekton', 'Quinn']
     }
   },
   methods: {
