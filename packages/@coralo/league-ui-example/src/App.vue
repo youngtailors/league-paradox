@@ -62,6 +62,7 @@
       <lu-dropdown
         :disabled="true"
         :options="options"
+        placeholder="This is placeholder"
       />
     </section>
   </div>
@@ -91,10 +92,18 @@ body
   background-attachment fixed
   color rgb(94.1%, 90.2%, 82.4%)
   font-family 'Roboto', sans-serif
+  padding 50px
 
 .input-section
   max-width 600px
 
 input
   font-size 100%
+
+section
+  margin-bottom 50px
+
+  h3
+    text-transform uppercase
+    font-weight 400
 </style>
