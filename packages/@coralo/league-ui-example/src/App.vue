@@ -65,6 +65,20 @@
         placeholder="This is placeholder"
       />
     </section>
+    <section>
+      <h1>Radio</h1>
+      <h3>Active</h3>
+      <lu-radio
+        :options="options"
+        v-model="selected"
+      />
+      <h3>Disabled</h3>
+      <lu-radio
+        :disabled="true"
+        v-model="selected"
+        :options="options"
+      />
+    </section>
   </div>
 </template>
 
@@ -75,6 +89,7 @@ export default {
     return {
       checked: false,
       text: '',
+      selected: 'Jinx',
       options: ['Jinx', 'Leona', 'Renekton', 'Quinn']
     }
   },
