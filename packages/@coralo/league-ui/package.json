@@ -34,5 +34,8 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "dependencies": {
+    "element-resize-detector": "^1.1.14"
+  }
 }

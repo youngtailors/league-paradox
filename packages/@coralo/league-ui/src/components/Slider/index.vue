@@ -1,12 +1,12 @@
 <template>
   <div
-    ref="root"
     :class="[
       'slider-input',
       {
         disabled
       }
     ]"
+    v-on="eventHandlers"
   >
     <input
       :disabled="disabled"
@@ -24,15 +24,35 @@
         :style="{ left: handleOffsetLeft }"
         class="handle"/>
     </div>
+    <div
+      v-if="tooltip"
+      ref="tooltip"
+      :style="tooltipStyle"
+      :class="[
+        'tooltip',
+        {
+          show
+        }
+      ]"
+    >
+      <card>{{ value }}</card>
+    </div>
   </div>
 </template>
 
 <script>
+import elementResizeDetector from 'element-resize-detector';
 import Handle from './Handle'
+import Card from '../Card'
+
+const erd = elementResizeDetector({
+  strategy: 'scroll'
+})
 
 export default {
   name: 'lu-slider',
   components: {
+    Card,
     Handle
   },
   model: {
@@ -68,7 +88,7 @@ export default {
   data () {
     return {
       width: 0,
-      showTooltip: false
+      show: false
     }
   },
   computed: {
@@ -77,12 +97,47 @@ export default {
     },
     handleOffsetLeft () {
       return `calc(${this.left} - 15px)`
+    },
+    tooltipStyle () {
+      const tooltipRef = this.$refs.tooltip
+      if (this.tooltip && this.width && tooltipRef) {
+        return {
+          left: `${((this.width - 30) * (this.value / this.max)) - ((tooltipRef.clientWidth - 30) / 2)}px`,
+          top: `${-45 - (tooltipRef.clientHeight / 2)}px`
+        }
+      }
+
+      return {
+        top: '-30px',
+        left: this.left
+      }
+    },
+    eventHandlers () {
+      if (!this.tooltip) return {}
+      return {
+        mouseover: this.handleMouseOver,
+        mouseout: this.handleMouseOut
+      }
     }
+  },
+  mounted () {
+    erd.listenTo(this.$el, ({ offsetWidth }) => {
+      this.width = offsetWidth
+    })
+    this.$once('hook:beforeDestroy', () => {
+      erd.removeAllListeners(this.$el)
+    })
   },
   methods: {
     handleChange (evt) {
       const newValue = parseInt(evt.target.value, 10)
       this.$emit('change', newValue)
+    },
+    handleMouseOver () {
+      this.show = true
+    },
+    handleMouseOut () {
+      this.show = false
     }
   }
 }
