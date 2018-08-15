@@ -40,7 +40,7 @@
         }
       ]"
     >
-      <card>{{ value }}</card>
+      <card borders="bottom">{{ value }}</card>
     </div>
   </div>
 </template>
