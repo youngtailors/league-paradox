@@ -79,6 +79,36 @@
         :options="options"
       />
     </section>
+    <section class="card">
+      <h1>Card</h1>
+      <h3>Title and Body</h3>
+      <div class="demo">
+        <lu-card>
+          <h2 slot="header">Header</h2>
+          This is a question of utmost importance, please answer honestly
+        </lu-card>
+      </div>
+      <h3>Custom Body</h3>
+      <div class="demo">
+        <lu-card>
+          <lu-radio
+            :options="options"
+            v-model="selected"
+          />
+        </lu-card>
+      </div>
+      <h3>With Button</h3>
+      <div class="demo">
+        <lu-card>
+          <h2 slot="header">Header</h2>
+          <p>This is a question of utmost importance, please answer honestly</p>
+          <lu-btn-group slot="button">
+            <lu-btn @click="btnClick">Hextech</lu-btn>
+            <lu-btn @click="btnClick">Vue</lu-btn>
+          </lu-btn-group>
+        </lu-card>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -117,6 +147,14 @@ input
 
 section
   margin-bottom 50px
+
+  &.card
+    .demo
+      display flex
+      width 100%
+      height 100%
+      justify-content center
+      align-items center
 
   h3
     text-transform uppercase
