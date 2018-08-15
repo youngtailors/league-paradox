@@ -101,8 +101,7 @@ export default {
       return this.value / this.max
     },
     fill () {
-      const percent = this.left * 100
-      return `${percent > 0 ? percent - 1 : 0}%`
+      return `${this.handleOffsetLeft + 1}px`
     },
     handleOffsetLeft () {
       if (this.width) {
