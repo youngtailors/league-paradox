@@ -7,13 +7,20 @@
       </div>
       <slot name="button" />
     </div>
-    <div class="border top bottom" />
+    <div
+      :class="`border ${borders}`" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'lu-card'
+  name: 'lu-card',
+  props: {
+    borders: {
+      type: String,
+      default: 'top bottom'
+    }
+  }
 }
 </script>
 

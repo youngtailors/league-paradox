@@ -56,12 +56,14 @@
       <h1>Dropdown</h1>
       <h3>Active</h3>
       <lu-dropdown
+        v-model="selected"
         :options="options"
       />
       <h3>Disabled</h3>
       <lu-dropdown
         :disabled="true"
         :options="options"
+        v-model="selected"
         placeholder="This is placeholder"
       />
     </section>
@@ -109,6 +111,23 @@
         </lu-card>
       </div>
     </section>
+    <section>
+      <h1>Slider</h1>
+      <h3>Normal</h3>
+      <lu-slider v-model="slider" />
+      <h3>Normal with step (step = 1)</h3>
+      <lu-slider
+        :step="1"
+        v-model="slider" />
+      <h3>With Tooltip</h3>
+      <lu-slider
+        :tooltip="true"
+        v-model="slider" />
+      <h3>Disabled</h3>
+      <lu-slider
+        :disabled="true"
+        v-model="slider" />
+    </section>
   </div>
 </template>
 
@@ -119,8 +138,9 @@ export default {
     return {
       checked: false,
       text: '',
-      selected: 'Jinx',
-      options: ['Jinx', 'Leona', 'Renekton', 'Quinn']
+      selected: -1,
+      options: ['Jinx', 'Leona', 'Renekton', 'Quinn'],
+      slider: 0
     }
   },
   methods: {

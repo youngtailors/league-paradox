@@ -6,9 +6,9 @@
     <radio-option
       v-for="(option, id) in options"
       :key="id"
-      :checked="option === selected"
+      :checked="id === selected"
       :disabled="disabled"
-      @change="change(option)"
+      @change="$emit('select', id)"
     >
       {{ option }}
     </radio-option>
@@ -29,7 +29,7 @@ export default {
   },
   props: {
     selected: {
-      type: String,
+      type: Number,
       required: true
     },
     options: {
@@ -39,11 +39,6 @@ export default {
     disabled: {
       type: Boolean,
       default: false
-    }
-  },
-  methods: {
-    change (value) {
-      this.$emit('select', value)
     }
   }
 }

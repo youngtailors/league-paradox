@@ -16,6 +16,7 @@ export default {
     {
       props: { selected, focused },
       data: { class: dynamicClass },
+      listeners: { click },
       children
     }
   ) {
@@ -26,6 +27,9 @@ export default {
         attrs: {
           role: 'option',
           'aria-selected': selected
+        },
+        on: {
+          click
         }
       },
       children
