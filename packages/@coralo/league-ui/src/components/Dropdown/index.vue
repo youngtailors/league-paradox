@@ -133,7 +133,7 @@ export default {
   position relative
   cursor pointer
   width 100%
-  font-family 'Spiegel'
+  font-family font-family
   color $lcu-text-dark
   letter-spacing 0.025rem
   outline none
