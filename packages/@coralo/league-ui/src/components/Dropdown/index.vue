@@ -22,7 +22,7 @@
         }
       ]"
     >
-      {{ `${selected ? selected : placeholder}` }}
+      {{ `${~selected ? options[selected] : placeholder}` }}
       <arrow class="arrow" />
     </div>
     <div
@@ -42,10 +42,11 @@
         :class="[
           'option',
           {
-            selected
+            selected: selected === id
           }
         ]"
         :key="id"
+        @click="$emit('select', id)"
       >{{ option }}</dropdown-option>
     </div>
   </div>
@@ -89,8 +90,8 @@ export default {
       default: false
     },
     selected: {
-      type: String,
-      default: ''
+      type: Number,
+      default: -1
     }
   },
   data () {
@@ -116,6 +117,9 @@ export default {
       }
 
       this.$emit('toggle')
+    },
+    optionClick () {
+      console.log('abc')
     }
   }
 }

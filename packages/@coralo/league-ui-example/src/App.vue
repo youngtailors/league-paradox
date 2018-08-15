@@ -56,12 +56,14 @@
       <h1>Dropdown</h1>
       <h3>Active</h3>
       <lu-dropdown
+        v-model="selected"
         :options="options"
       />
       <h3>Disabled</h3>
       <lu-dropdown
         :disabled="true"
         :options="options"
+        v-model="selected"
         placeholder="This is placeholder"
       />
     </section>
@@ -136,7 +138,7 @@ export default {
     return {
       checked: false,
       text: '',
-      selected: 'Jinx',
+      selected: -1,
       options: ['Jinx', 'Leona', 'Renekton', 'Quinn'],
       slider: 0
     }
