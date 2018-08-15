@@ -7,6 +7,7 @@
       </div>
       <slot name="button" />
     </div>
+    <div class="border top bottom" />
   </div>
 </template>
 
