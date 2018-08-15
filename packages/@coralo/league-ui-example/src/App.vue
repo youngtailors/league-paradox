@@ -113,10 +113,14 @@
       <h1>Slider</h1>
       <h3>Normal</h3>
       <lu-slider v-model="slider" />
-      <h3>Normal with step</h3>
-      <lu-slider v-model="slider" />
+      <h3>Normal with step (step = 1)</h3>
+      <lu-slider
+        :step="1"
+        v-model="slider" />
       <h3>With Tooltip</h3>
-      <lu-slider v-model="slider" />
+      <lu-slider
+        :tooltip="true"
+        v-model="slider" />
       <h3>Disabled</h3>
       <lu-slider
         :disabled="true"
