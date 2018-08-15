@@ -18,7 +18,12 @@
       @input="handleChange"
     >
     <div class="control">
-      <div class="fill" style="width: 100%" />
+      <div
+        :style="{
+          width: fill
+        }"
+        class="fill"
+      />
       <div class="track" />
       <handle
         :style="{ left: handleOffsetLeft }"
@@ -41,7 +46,7 @@
 </template>
 
 <script>
-import elementResizeDetector from 'element-resize-detector';
+import elementResizeDetector from 'element-resize-detector'
 import Handle from './Handle'
 import Card from '../Card'
 
@@ -93,23 +98,30 @@ export default {
   },
   computed: {
     left () {
-      return `${this.value / this.max * 100}%`
+      return this.value / this.max
+    },
+    fill () {
+      const percent = this.left * 100
+      return `${percent > 0 ? percent - 1 : 0}%`
     },
     handleOffsetLeft () {
-      return `calc(${this.left} - 15px)`
+      if (this.width) {
+        return (this.width - 30) * (this.value / this.max)
+      }
+      return `calc(${this.left * 100}% - 15px)`
     },
     tooltipStyle () {
       const tooltipRef = this.$refs.tooltip
       if (this.tooltip && this.width && tooltipRef) {
         return {
-          left: `${((this.width - 30) * (this.value / this.max)) - ((tooltipRef.clientWidth - 30) / 2)}px`,
+          left: `${((this.width - 30) * (this.left)) - ((tooltipRef.clientWidth - 30) / 2)}px`,
           top: `${-45 - (tooltipRef.clientHeight / 2)}px`
         }
       }
 
       return {
         top: '-30px',
-        left: this.left
+        left: `${this.left * 100}%`
       }
     },
     eventHandlers () {
