@@ -109,6 +109,19 @@
         </lu-card>
       </div>
     </section>
+    <section>
+      <h1>Slider</h1>
+      <h3>Normal</h3>
+      <lu-slider v-model="slider" />
+      <h3>Normal with step</h3>
+      <lu-slider v-model="slider" />
+      <h3>With Tooltip</h3>
+      <lu-slider v-model="slider" />
+      <h3>Disabled</h3>
+      <lu-slider
+        :disabled="true"
+        v-model="slider" />
+    </section>
   </div>
 </template>
 
@@ -120,7 +133,8 @@ export default {
       checked: false,
       text: '',
       selected: 'Jinx',
-      options: ['Jinx', 'Leona', 'Renekton', 'Quinn']
+      options: ['Jinx', 'Leona', 'Renekton', 'Quinn'],
+      slider: 0
     }
   },
   methods: {

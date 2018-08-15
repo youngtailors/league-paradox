@@ -10,4 +10,6 @@ export { default as Dropdown } from './Dropdown'
 
 export { default as Radio } from './Radio'
 
+export { default as Slider } from './Slider'
+
 export { default as TextInput } from './TextInput'
