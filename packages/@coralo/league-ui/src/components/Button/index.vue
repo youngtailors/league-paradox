@@ -269,10 +269,10 @@ export default {
 
     .flare
       &::before
-        animation clickFlare 400ms cubic-bezier(0, 0, 0.33, 1) 0ms 1
+        animation click-flare 400ms cubic-bezier(0, 0, 0.33, 1) 0ms 1
 
       &::after
-        animation clickFlare 400ms cubic-bezier(0, 0, 0.33, 1) 30ms 1
+        animation click-flare 400ms cubic-bezier(0, 0, 0.33, 1) 30ms 1
 
   &.disabled
     cursor default
@@ -314,7 +314,7 @@ export default {
     100%
       box-shadow 0 0 5px 4px rgba(240, 230, 216, 0), 0 0 2px 1px rgba(240, 230, 216, 0) inset
 
-  @keyframes clickFlare
+  @keyframes click-flare
     0%
       opacity 0
 
