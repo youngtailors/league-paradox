@@ -5,9 +5,8 @@
   "author": "Evan N <dacsang97@gmail.com>",
   "private": true,
   "scripts": {
-    "build": "vue-cli-service build src/main.js --mode production --target lib --name leagueui --modern --no-clean",
-    "lint": "vue-cli-service lint",
-    "watch": "npm run build -- --watch"
+    "build": "rollup -c --environment BUILD:production",
+    "watch": "concurrently \"rollup -w -c\""
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "^3.0.0-rc.10"
@@ -26,7 +25,7 @@
     "README.MD"
   ],
   "license": "MIT",
-  "main": "dist/leagueui.common.js",
+  "main": "dist/league-ui.common.js",
   "peerDependencies": {
     "vue": "^2.5.17"
   },
