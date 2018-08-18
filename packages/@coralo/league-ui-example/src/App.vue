@@ -24,7 +24,7 @@ export default {
   box-sizing border-box
 
 body
-  background-color #1c2229
+  background-color #171817
   color #c4b998
   font-family 'Beaufort'
   font-weight 400
@@ -49,7 +49,7 @@ body
 
 .title
   text-transform uppercase
-  font-weight bold
+  font-weight 500
   font-size 26px
   text-transform uppercase
   letter-spacing 4px

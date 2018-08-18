@@ -7,27 +7,27 @@
         <section>
           <div class="title">Button</div>
           <div class="subtitle">Normal Button</div>
-          <lu-btn @click="btnClick">Hextech</lu-btn>
+          <lu-btn @click="btnClick">Find Match</lu-btn>
           <div class="subtitle">Disabled Button</div>
-          <lu-btn disabled>Tìm trận</lu-btn>
+          <lu-btn disabled>Find Match</lu-btn>
         </section>
         <section>
           <div class="title">Button Group</div>
           <lu-btn-group>
-            <lu-btn @click="btnClick">Button 1</lu-btn>
-            <lu-btn @click="btnClick">Button 2</lu-btn>
-            <lu-btn disabled @click="btnClick">Button 3</lu-btn>
+            <lu-btn @click="btnClick">League</lu-btn>
+            <lu-btn @click="btnClick">Of</lu-btn>
+            <lu-btn disabled @click="btnClick">Legend</lu-btn>
           </lu-btn-group>
         </section>
         <section>
           <div class="title">Checkbox</div>
           <div class="subtitle">Active</div>
-          <lu-checkbox v-model="checked">Hextech</lu-checkbox>
+          <lu-checkbox v-model="checked">New Skin</lu-checkbox>
           <blockquote>
             <strong>Checkbox Status:</strong> {{ checked }}
           </blockquote>
           <div class="subtitle">Disabled</div>
-          <lu-checkbox disabled>Disabled</lu-checkbox>
+          <lu-checkbox disabled>Buy now</lu-checkbox>
         </section>
         <section class="input-section">
           <div class="title">Text Input</div>
@@ -37,33 +37,33 @@
           <div class="subtitle">Normal</div>
           <lu-input
             v-model="text"
-            placeholder="Hextech..."
+            placeholder="Placeholder..."
           />
           <div class="subtitle">Disable</div>
           <lu-input
             v-model="text"
-            placeholder="Hextech..."
+            placeholder="Placeholder..."
             disabled />
           <div class="subtitle">Search</div>
           <lu-input
             v-model="text"
-            placeholder="Hextech..."
+            placeholder="Placeholder..."
             type="search" />
           <div class="subtitle">With Clear</div>
           <lu-input
             v-model="text"
-            placeholder="Hextech..."
+            placeholder="Placeholder..."
             hide-clear
           />
         </section>
         <section>
-          <h1>Dropdown</h1>
-          <h3>Active</h3>
+          <div class="title">Dropdown</div>
+          <div class="subtitle">Normal</div>
           <lu-dropdown
             v-model="selected"
             :options="options"
           />
-          <h3>Disabled</h3>
+          <div class="subtitle">Disabled</div>
           <lu-dropdown
             :disabled="true"
             :options="options"
@@ -72,13 +72,13 @@
           />
         </section>
         <section>
-          <h1>Radio</h1>
-          <h3>Active</h3>
+          <div class="title">Radio</div>
+          <div class="subtitle">Normal</div>
           <lu-radio
             :options="options"
             v-model="selected"
           />
-          <h3>Disabled</h3>
+          <div class="subtitle">Disabled</div>
           <lu-radio
             :disabled="true"
             v-model="selected"
@@ -86,59 +86,64 @@
           />
         </section>
         <section class="card">
-          <h1>Card</h1>
-          <h3>Title and Body</h3>
+          <div class="title">Card</div>
+          <div class="subtitle">Normal</div>
           <div class="demo">
             <lu-card>
-              <h2 slot="header">Header</h2>
-              This is a question of utmost importance, please answer honestly
+              <h2 slot="header" class="title">Deathbringer Stance</h2>
+              Aatrox deals bonus damage on his next attack and reduces heals and shields on the target.
             </lu-card>
           </div>
-          <h3>Custom Body</h3>
+          <div class="subtitle">Custom Body</div>
           <div class="demo">
             <lu-card>
+              <h2 slot="header" class="title">Card with Radio</h2>
+              <p>Who's the most fun champion to play?</p>
               <lu-radio
                 :options="options"
                 v-model="selected"
               />
             </lu-card>
           </div>
-          <h3>With Button</h3>
+          <div class="subtitle">With Button</div>
           <div class="demo">
             <lu-card>
-              <h2 slot="header">Header</h2>
-              <p>This is a question of utmost importance, please answer honestly</p>
+              <h2 slot="header" class="title">Deathbringer Stance ?</h2>
+              <p>Aatrox deals bonus damage on his next attack and reduces heals and shields on the target.</p>
               <lu-btn-group slot="button">
-                <lu-btn @click="btnClick">Hextech</lu-btn>
-                <lu-btn @click="btnClick">Vue</lu-btn>
+                <lu-btn @click="btnClick">Yes</lu-btn>
+                <lu-btn @click="btnClick">No</lu-btn>
               </lu-btn-group>
             </lu-card>
           </div>
         </section>
         <section>
-          <h1>Slider</h1>
-          <h3>Normal</h3>
+          <div class="title">Slider</div>
+          <div class="subtitle">Default <strong>Step = 10</strong></div>
           <lu-slider v-model="slider" />
-          <h3>Normal with step (step = 1)</h3>
+          <div class="subtitle">Custom <strong>Step = 1</strong></div>
           <lu-slider
             :step="1"
             v-model="slider" />
-          <h3>With Tooltip</h3>
+          <div class="subtitle">With Tooltip</div>
           <lu-slider
             :tooltip="true"
             v-model="slider" />
-          <h3>Disabled</h3>
+          <div class="subtitle">Disabled</div>
           <lu-slider
             :disabled="true"
             v-model="slider" />
         </section>
-        <lu-navbar>
-          <lu-nav-item
-            :active="true"
-            href="/"
-          >Home</lu-nav-item>
-          <lu-nav-item href="/shop">Shop</lu-nav-item>
-        </lu-navbar>
+        <section>
+          <div class="title navbar-title">Navbar</div>
+          <lu-navbar >
+            <lu-nav-item
+              :active="true"
+              href="/"
+            >Active</lu-nav-item>
+            <lu-nav-item href="/shop">Normal</lu-nav-item>
+          </lu-navbar>
+        </section>
       </div>
     </div>
   </div>
@@ -156,7 +161,7 @@ export default {
       checked: false,
       text: '',
       selected: -1,
-      options: ['Jinx', 'Leona', 'Renekton', 'Quinn'],
+      options: ['Aatrox', 'Pyke', 'Swain', 'Jinx'],
       slider: 0
     }
   },
@@ -196,7 +201,6 @@ section
       justify-content center
       align-items center
 
-  h3
-    text-transform uppercase
-    font-weight 400
+  .navbar-title
+    margin-bottom 50px
 </style>

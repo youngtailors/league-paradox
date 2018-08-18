@@ -20,8 +20,7 @@
   display flex
   justify-content center
   align-items center
-  margin-top -82px
-  height 100vh
+  height calc(100vh - 82px)
   min-height 500px
 
   &::after
