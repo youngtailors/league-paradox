@@ -52,7 +52,6 @@ export default {
       width 100%
       text-align center
       box-sizing border-box
-      font-family font-family
 
       & h2
         color lcu-gold
@@ -66,7 +65,6 @@ export default {
         line-height 1rem
         letter-spacing 0.025rem
         margin 0
-        font-family font-family
 
         &:last-child
           margin-bottom -2px

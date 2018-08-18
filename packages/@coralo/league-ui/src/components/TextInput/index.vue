@@ -84,7 +84,6 @@ export default {
   display inline-block
   width 100%
   position relative
-  font-family font-family
 
   .clear
     position absolute

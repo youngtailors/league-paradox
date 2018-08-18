@@ -60,7 +60,6 @@ export default {
     font-weight 700
     letter-spacing 0.075em
     text-transform uppercase
-    font-family font-family
     transition text-shadow 0.3s ease-in-out
 
     &.active

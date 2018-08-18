@@ -111,7 +111,6 @@ export default {
 .button
   display inline-block
   position relative
-  font-family font-family
   text-transform uppercase
   color lcu-gold-medium
   font-weight bold

@@ -25,5 +25,6 @@
   },
   "dependencies": {
     "@coralo/league-ui": "^0.0.0"
-  }
+  },
+  "devDependencies": {}
 }
