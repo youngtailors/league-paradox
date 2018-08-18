@@ -8,13 +8,13 @@
         }
       ]"
     >
-      <span
+      <a
+        :href="href"
         role="navigation"
         class="content"
-        @click="handleClick"
       >
         <slot />
-      </span>
+      </a>
     </div>
   </div>
 </template>
@@ -55,15 +55,19 @@ export default {
 
   .nav-item
     position relative
-    color #CDBE91
     font-size 14px
     font-weight 700
     letter-spacing 0.075em
     text-transform uppercase
     transition text-shadow 0.3s ease-in-out
 
+    a
+      color #CDBE91
+      text-decoration none
+
     &.active
-      color #F0E6D2
+      a
+        color #F0E6D2
 
       &::before
         content ''

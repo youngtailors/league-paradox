@@ -7,8 +7,10 @@
       <lu-nav-item
         :active="true"
         href="/">League UI</lu-nav-item>
-      <lu-nav-item class="nav-right">
-        Github
+      <lu-nav-item
+        class="nav-right"
+        href="https://github.com/coralo/league-paradox">
+        Github <i class="fab fa-github fa-2x" />
       </lu-nav-item>
     </lu-navbar>
   </nav>

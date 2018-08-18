@@ -2,17 +2,20 @@
   <div>
     <navbar />
     <landing />
+    <footer-comp />
   </div>
 </template>
 
 <script>
 import Navbar from './components/Navbar'
 import Landing from './views/Landing'
+import FooterComp from './components/Footer'
 
 export default {
   components: {
     Navbar,
-    Landing
+    Landing,
+    FooterComp
   }
 }
 </script>

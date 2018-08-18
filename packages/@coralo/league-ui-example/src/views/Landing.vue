@@ -176,7 +176,11 @@ export default {
 <style lang="stylus" scoped>
 .landing
   display grid
-  grid-template-columns 80px 1fr 80px
+  grid-template-columns 20px 1fr 20px
+
+@media screen and (min-width: 768px)
+  .landing
+    grid-template-columns 80px 1fr 80px
 
 .container
   grid-column 2 / 3
