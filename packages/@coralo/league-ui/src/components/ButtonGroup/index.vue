@@ -18,7 +18,6 @@ export default {
 
   .content
     position relative
-    background-color #010A13
     padding 0 4px
     display flex
 

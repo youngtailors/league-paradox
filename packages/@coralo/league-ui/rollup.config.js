@@ -5,6 +5,7 @@ import nodent from 'rollup-plugin-nodent'
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import url from 'postcss-url'
+import autoprefixer from 'autoprefixer'
 import { uglify } from 'rollup-plugin-uglify'
 
 const reslv = p => {
@@ -13,7 +14,7 @@ const reslv = p => {
 
 const style = {
   trim: false,
-  postcssPlugins: [url({ url: 'inline' })]
+  postcssPlugins: [url({ url: 'inline' }), autoprefixer()]
 }
 
 const plugins = [

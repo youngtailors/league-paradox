@@ -43,6 +43,7 @@
     "@vue/cli-service": "^3.0.0-rc.10",
     "@vue/eslint-config-standard": "^3.0.0-rc.10",
     "@vue/test-utils": "^1.0.0-beta.24",
+    "autoprefixer": "^9.1.1",
     "babel-jest": "^23.4.2",
     "babel-preset-env": "^1.7.0",
     "concurrently": "^3.6.1",
@@ -75,6 +76,7 @@
     "serve": "lerna run --parallel serve",
     "watch": "lerna run --parallel watch",
     "start": "concurrently 'npm:watch' 'npm:serve'",
-    "setup": "lerna clean --yes && yarn install"
+    "setup": "lerna clean --yes && yarn install",
+    "gh": "git subtree push --prefix packages/@coralo/league-ui-example/dist origin gh-pages"
   }
 }

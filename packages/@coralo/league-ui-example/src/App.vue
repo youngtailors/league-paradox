@@ -1,194 +1,90 @@
 <template>
   <div>
-    <lu-navbar>
-      <lu-nav-item
-        :active="true"
-        href="/"
-      >Home</lu-nav-item>
-      <lu-nav-item href="/shop">Shop</lu-nav-item>
-    </lu-navbar>
-    <div class="body">
-      <section>
-        <h1>Button</h1>
-        <h3>Normal Button</h3>
-        <lu-btn @click="btnClick">Hextech</lu-btn>
-        <h3>Disabled Button</h3>
-        <lu-btn disabled>Tìm trận</lu-btn>
-      </section>
-      <section>
-        <h1>Button Group</h1>
-        <lu-btn-group>
-          <lu-btn @click="btnClick">Button 1</lu-btn>
-          <lu-btn @click="btnClick">Button 2</lu-btn>
-          <lu-btn disabled @click="btnClick">Button 3</lu-btn>
-        </lu-btn-group>
-      </section>
-      <section>
-        <h1>Checkbox</h1>
-        <h3>Active</h3>
-        <p>
-          Checkbox Status: {{ checked }}
-        </p>
-        <lu-checkbox v-model="checked">Hextech</lu-checkbox>
-        <h3>Disabled</h3>
-        <lu-checkbox disabled>Disabled</lu-checkbox>
-      </section>
-      <section class="input-section">
-        <h1>Text Input</h1>
-        <p>
-          <strong>Message</strong>: {{ text }}
-        </p>
-        <h3>Enable</h3>
-        <lu-input
-          v-model="text"
-          placeholder="Hextech..."
-        />
-        <h3>Disable</h3>
-        <lu-input
-          v-model="text"
-          placeholder="Hextech..."
-          disabled />
-        <h3>Search</h3>
-        <lu-input
-          v-model="text"
-          placeholder="Hextech..."
-          type="search" />
-        <h3>With Clear</h3>
-        <lu-input
-          v-model="text"
-          placeholder="Hextech..."
-          hide-clear
-        />
-      </section>
-      <section>
-        <h1>Dropdown</h1>
-        <h3>Active</h3>
-        <lu-dropdown
-          v-model="selected"
-          :options="options"
-        />
-        <h3>Disabled</h3>
-        <lu-dropdown
-          :disabled="true"
-          :options="options"
-          v-model="selected"
-          placeholder="This is placeholder"
-        />
-      </section>
-      <section>
-        <h1>Radio</h1>
-        <h3>Active</h3>
-        <lu-radio
-          :options="options"
-          v-model="selected"
-        />
-        <h3>Disabled</h3>
-        <lu-radio
-          :disabled="true"
-          v-model="selected"
-          :options="options"
-        />
-      </section>
-      <section class="card">
-        <h1>Card</h1>
-        <h3>Title and Body</h3>
-        <div class="demo">
-          <lu-card>
-            <h2 slot="header">Header</h2>
-            This is a question of utmost importance, please answer honestly
-          </lu-card>
-        </div>
-        <h3>Custom Body</h3>
-        <div class="demo">
-          <lu-card>
-            <lu-radio
-              :options="options"
-              v-model="selected"
-            />
-          </lu-card>
-        </div>
-        <h3>With Button</h3>
-        <div class="demo">
-          <lu-card>
-            <h2 slot="header">Header</h2>
-            <p>This is a question of utmost importance, please answer honestly</p>
-            <lu-btn-group slot="button">
-              <lu-btn @click="btnClick">Hextech</lu-btn>
-              <lu-btn @click="btnClick">Vue</lu-btn>
-            </lu-btn-group>
-          </lu-card>
-        </div>
-      </section>
-      <section>
-        <h1>Slider</h1>
-        <h3>Normal</h3>
-        <lu-slider v-model="slider" />
-        <h3>Normal with step (step = 1)</h3>
-        <lu-slider
-          :step="1"
-          v-model="slider" />
-        <h3>With Tooltip</h3>
-        <lu-slider
-          :tooltip="true"
-          v-model="slider" />
-        <h3>Disabled</h3>
-        <lu-slider
-          :disabled="true"
-          v-model="slider" />
-      </section>
-    </div>
+    <navbar />
+    <landing />
+    <footer-comp />
   </div>
 </template>
 
 <script>
+import Navbar from './components/Navbar'
+import Landing from './views/Landing'
+import FooterComp from './components/Footer'
 
 export default {
-  data () {
-    return {
-      checked: false,
-      text: '',
-      selected: -1,
-      options: ['Jinx', 'Leona', 'Renekton', 'Quinn'],
-      slider: 0
-    }
-  },
-  methods: {
-    btnClick () {
-      console.log('Button clicked')
-    }
+  components: {
+    Navbar,
+    Landing,
+    FooterComp
   }
 }
 </script>
 
 <style lang="stylus">
+*
+  margin 0
+  padding 0
+  box-sizing border-box
+
 body
-  background url('./backdrop.png')
-  background-attachment fixed
-  color rgb(94.1%, 90.2%, 82.4%)
-  font-family 'Roboto', sans-serif
-  padding 25px
+  background-color #171817
+  color #c4b998
+  font-family 'Beaufort'
+  font-weight 400
 
-.input-section
-  max-width 600px
+.headline
+  text-transform uppercase
+  color #b59758
+  font-weight bold
+  font-size 32px
+  margin-top 0
+  margin-bottom 32px
+  text-transform uppercase
+  letter-spacing 6px
 
-.body
-  padding 50px
+  &::after
+    content ''
+    display block
+    width 60px
+    height 1px
+    background-color #525048
+    margin-top 25px
 
-input
-  font-size 100%
+.title
+  text-transform uppercase
+  font-weight 500
+  font-size 26px
+  text-transform uppercase
+  letter-spacing 4px
+  margin-bottom 20px
 
-section
-  margin-bottom 50px
+.subtitle
+  position relative
+  width fit-content
+  margin 25px 76px 25px 0px
+  font-size 16px
+  letter-spacing 1px
+  text-transform uppercase
 
-  &.card
-    .demo
-      display flex
-      width 100%
-      height 100%
-      justify-content center
-      align-items center
+  &::after
+    content ''
+    display inline-block
+    position absolute
+    top calc(50% - 2px)
+    width 56px
+    height 7px
+    margin 0 10px
+    background-image url('./assets/images/diamond-arrow-left.png')
+    background-size 100%
 
-  h3
-    text-transform uppercase
-    font-weight 400
+  &::after
+    left 100%
+    transform rotate(180deg)
+
+blockquote
+  border-left 3px solid #c4b998
+  margin-top 15px
+  padding 15px
+  font-size 16px
+  background #c4b99812
 </style>
