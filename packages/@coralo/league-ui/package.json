@@ -8,6 +8,12 @@
     "build": "rollup -c --environment BUILD:production",
     "watch": "concurrently \"rollup -w -c\""
   },
+  "module": "dist/league-ui.es.js",
+  "files": [
+    "dist",
+    "README.MD"
+  ],
+  "main": "dist/league-ui.common.js",
   "devDependencies": {
     "@vue/cli-plugin-eslint": "^3.0.0-rc.10"
   },
@@ -20,12 +26,7 @@
     "react"
   ],
   "repository": "https://github.com/coralo/league-paradox",
-  "files": [
-    "dist",
-    "README.MD"
-  ],
   "license": "MIT",
-  "main": "dist/league-ui.common.js",
   "peerDependencies": {
     "vue": "^2.5.17"
   },
