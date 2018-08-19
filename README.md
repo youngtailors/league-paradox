@@ -6,12 +6,12 @@ League of Legend UI Component
 
 ## Packages
 
-| Package                                                        | Version                                                                                                         |
-| -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| **[vue-league](/packages/@coralo/vue-league)**                 | [![npm](https://img.shields.io/npm/v/vue-league.svg)](https://www.npmjs.com/package/vue-league)                 |
-| **[vue-league-example](/packages/@coralo/vue-league-example)** | [![npm](https://img.shields.io/npm/v/vue-league-example.svg)](https://www.npmjs.com/package/vue-league-example) |
-| **[react-league](#)**                                          | Coming soon                                                                                                     |
-| **[react-league-example](#)**                                  | Coming soon                                                                                                     |
+| Package                                                        | Version                                                                                                                         |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **[vue-league](/packages/@coralo/vue-league)**                 | [![npm](https://badge.fury.io/js/%40coralo%2Fvue-league.svg)](https://www.npmjs.com/package/@coralo/vue-league)                 |
+| **[vue-league-example](/packages/@coralo/vue-league-example)** | [![npm](https://badge.fury.io/js/%40coralo%2Fvue-league-example.svg)](https://www.npmjs.com/package/@coralo/vue-league-example) |
+| **[react-league](#)**                                          | Coming soon                                                                                                                     |
+| **[react-league-example](#)**                                  | Coming soon                                                                                                                     |
 
 ## Roadmap
 
