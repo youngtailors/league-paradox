@@ -1,6 +1,6 @@
 {
   "name": "@coralo/vue-league",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.0",
   "description": "The League of Legend UI",
   "author": "Evan N <dacsang97@gmail.com>",
   "private": true,
