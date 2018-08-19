@@ -33,11 +33,11 @@ export default [
     output: [
       {
         format: 'es',
-        file: reslv('dist/league-ui.es.js')
+        file: reslv('dist/vue-league.es.js')
       },
       {
         format: 'cjs',
-        file: reslv('dist/league-ui.common.js'),
+        file: reslv('dist/vue-league.common.js'),
         exports: 'named'
       }
     ],
@@ -48,7 +48,7 @@ export default [
     input: reslv('src/main.js'),
     output: {
       format: 'iife',
-      file: reslv('dist/league-ui.iife.js'),
+      file: reslv('dist/vue-league.iife.js'),
       name: 'leagueui',
       exports: 'named'
     },

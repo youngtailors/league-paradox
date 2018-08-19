@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import LeagueUI from '@coralo/league-ui'
+import LeagueUI from '@coralo/vue-league'
 
 // Style
 import './assets/styl/typography.styl'

@@ -1,7 +1,7 @@
 {
-  "name": "@coralo/league-ui-example",
+  "name": "@coralo/vue-league-example",
   "version": "0.0.0",
-  "description": "League of Legend UI Example",
+  "description": " Example League of Legend UI for VueJS",
   "main": "index.js",
   "author": "Evan N <dacsang97@gmail.com>",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "serve": "vue-cli-service serve"
   },
   "dependencies": {
-    "@coralo/league-ui": "^0.0.0"
+    "@coralo/vue-league": "^0.0.0"
   },
   "devDependencies": {}
 }

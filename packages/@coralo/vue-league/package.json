@@ -1,19 +1,19 @@
 {
-  "name": "@coralo/league-ui",
+  "name": "@coralo/vue-league",
   "version": "0.0.0",
   "description": "The League of Legend UI",
   "author": "Evan N <dacsang97@gmail.com>",
   "private": true,
   "scripts": {
-    "build": "rollup -c --environment BUILD:production",
+    "build": "rollup -c",
     "watch": "concurrently \"rollup -w -c\""
   },
-  "module": "dist/league-ui.es.js",
+  "module": "dist/vue-league.es.js",
   "files": [
     "dist",
     "README.MD"
   ],
-  "main": "dist/league-ui.common.js",
+  "main": "dist/vue-league.common.js",
   "devDependencies": {
     "@vue/cli-plugin-eslint": "^3.0.0-rc.10"
   },
