@@ -8,8 +8,8 @@ League of Legend UI Component
 
 | Package                                                        | Version                                                                                                         |
 | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| **[vue-league](/packages/@coralo/vue-league)**                 | [![npm](https://img.shields.io/npm/v/vue-league.svg)](https://www.npmjs.com/package/vue-teible)                 |
-| **[vue-league-example](/packages/@coralo/vue-league-example)** | [![npm](https://img.shields.io/npm/v/vue-league-example.svg)](https://www.npmjs.com/package/vue-teible-example) |
+| **[vue-league](/packages/@coralo/vue-league)**                 | [![npm](https://img.shields.io/npm/v/vue-league.svg)](https://www.npmjs.com/package/vue-league)                 |
+| **[vue-league-example](/packages/@coralo/vue-league-example)** | [![npm](https://img.shields.io/npm/v/vue-league-example.svg)](https://www.npmjs.com/package/vue-league-example) |
 | **[react-league](#)**                                          | Coming soon                                                                                                     |
 | **[react-league-example](#)**                                  | Coming soon                                                                                                     |
 

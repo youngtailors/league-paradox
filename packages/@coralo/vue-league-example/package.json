@@ -5,7 +5,6 @@
   "main": "index.js",
   "author": "Evan N <dacsang97@gmail.com>",
   "license": "MIT",
-  "private": true,
   "keywords": [
     "league-of-legend",
     "lol",

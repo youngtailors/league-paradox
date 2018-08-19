@@ -3,7 +3,6 @@
   "version": "0.0.1-alpha.1",
   "description": "The League of Legend UI",
   "author": "Evan N <dacsang97@gmail.com>",
-  "private": true,
   "scripts": {
     "build": "rollup -c",
     "watch": "concurrently \"rollup -w -c\""
