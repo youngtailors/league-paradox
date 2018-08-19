@@ -77,6 +77,6 @@
     "watch": "lerna run --parallel watch",
     "start": "concurrently 'npm:watch' 'npm:serve'",
     "setup": "lerna clean --yes && yarn install",
-    "gh": "git subtree push --prefix packages/@coralo/league-ui-example/dist origin gh-pages"
+    "gh": "git subtree push --prefix packages/@coralo/vue-league-example/dist origin gh-pages"
   }
 }
