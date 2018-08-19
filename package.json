@@ -34,8 +34,7 @@
   },
   "private": true,
   "workspaces": [
-    "packages/@coralo/*",
-    "packages/test/*"
+    "packages/@coralo/*"
   ],
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-rc.10",
