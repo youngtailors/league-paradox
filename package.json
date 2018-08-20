@@ -70,7 +70,7 @@
     "clean": "rimraf packages/**/dist",
     "test": "jest",
     "bump": "lerna publish --npm-client npm",
-    "test-ci": "yarn build && yarn coverage -- --ci --maxWorkers=4 --no-cache",
+    "test-ci": "yarn build && yarn coverage --ci --maxWorkers=4 --no-cache",
     "coverage": "yarn test --coverage",
     "prebuild": "yarn clean",
     "serve": "lerna run --parallel serve",
