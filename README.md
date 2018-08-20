@@ -1,6 +1,6 @@
 # league-paradox
 
-[![Build Status](https://travis-ci.org/coralo/league-paradox.svg?branch=master)](https://travis-ci.org/coralo/league-paradox) [![codecov](https://codecov.io/gh/coralo/league-paradox/branch/master/graph/badge.svg)](https://codecov.io/gh/coralo/league-paradox) [![dependencies Status](https://david-dm.org/coralo/league-paradox/status.svg)](https://david-dm.org/coralo/league-paradox) [![devDependencies Status](https://david-dm.org/coralo/league-paradox/dev-status.svg)](https://david-dm.org/coralo/league-paradox?type=dev)
+[![Build Status](https://travis-ci.com/coralo/league-paradox.svg?branch=master)](https://travis-ci.com/coralo/league-paradox) [![codecov](https://codecov.io/gh/coralo/league-paradox/branch/master/graph/badge.svg)](https://codecov.io/gh/coralo/league-paradox) [![dependencies Status](https://david-dm.org/coralo/league-paradox/status.svg)](https://david-dm.org/coralo/league-paradox) [![devDependencies Status](https://david-dm.org/coralo/league-paradox/dev-status.svg)](https://david-dm.org/coralo/league-paradox?type=dev)
 
 League of Legend UI Component
 
